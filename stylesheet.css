@@ -14,12 +14,14 @@ html, body {
 /* Variables */
 :root {
     --primary-colour: #ffffff;
-    --secondary-colour: #090D1D;
+    --secondary-colour: #050d2c;
+    --secondary-colour2: #111c49;
     --extra-colour-1: #8f8f8f;
     --extra-colour-2: #AE1510;
+    --extra-colour-3: #d3d3d3;
     
-    --padding-small: 0.5em;
-    --padding-medium: 1.5m;
+    --padding-small: 1em;
+    --padding-medium: 2em;
     --padding-large: 3em;
 
     --font-extra-small: 0.75rem;
@@ -64,8 +66,10 @@ img {
     gap: var(--margin-medium);
 }
 
-.nav-branding {
+.nav-branding h1{
+    font-family: 'Ruda', serif;
     font-weight: 900;
+    font-size: var(--font-medium);
 }
 
 .nav-center-left {
@@ -84,6 +88,12 @@ img {
     font-size: var(--font-extra-small);
     font-weight: 100;
     color: var(--extra-colour-1);
+
+    cursor: pointer;
+}
+
+.nav-left-button:hover {
+    color: var(--secondary-colour);
 }
 
 .nav-left-button img {
@@ -94,8 +104,37 @@ img {
 .nav-right {
     display: flex;
     flex-direction: row;
-    gap: var(--margin-small);
+    gap: 10px;
 }
+
+/* Buttons */
+.btn-light {
+    border: none;
+    font-size: var(--font-extra-small);
+    padding: var(--padding-small);
+    border-radius: 5px;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.btn-light:hover {
+    background-color: var(--extra-colour-3);
+}
+
+.btn-dark {
+    border: none;
+    font-size: var(--font-extra-small);
+    padding: var(--padding-small) var(--padding-large);
+    border-radius: 5px;
+    background-color: var(--secondary-colour);
+    color: var(--primary-colour);
+    cursor: pointer;
+}
+
+.btn-dark:hover {
+    background-color: var(--secondary-colour2);
+}
+
 
 /* Main Section */
 .main-section {
@@ -122,4 +161,13 @@ img {
     justify-content: space-evenly;
     align-items: flex-start;
     gap: var(--margin-medium);
+}
+
+.main-section .background {
+    position: absolute;
+    width: auto;
+    height: 100vh;
+    z-index: -1;
+    bottom: 0;
+    right: 0;
 }
