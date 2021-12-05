@@ -1,4 +1,4 @@
-# HeLLo-simple-responsive-website
+# HeLLo-simple-landing-website
  A simple responsive, single page website for a company named HeLLo.
 
 ## Screenshots
